@@ -6,7 +6,11 @@ package bsu.rfe.java.group6.lab1.Podobed.varA3;
             super("Сыр");
         }
         public void consume() {
-            System.out.println(this + " съеден");
+            System.out.println(this + " съеден" + " и калорийностью: " + calculateCalories());
+        }
+        public double calculateCalories()
+        {
+            return 70;
         }
 // Переопределять метод equals() в данном классе не нужно, т.к. он
 // не добавляет новых полей данных, а сравнение по внутреннему полю name

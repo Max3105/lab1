@@ -1,7 +1,7 @@
 package bsu.rfe.java.group6.lab1.Podobed.varA3;
 
 
-    public abstract class Food implements Consumable {
+    public abstract class Food implements Consumable, Nutritious {
         String name = null;
         public Food(String name) {
             this.name = name;

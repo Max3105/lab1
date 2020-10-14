@@ -9,6 +9,22 @@ public class Apple extends Food
         super("Яблоко");
         this.size = size;
     }
+    public double calculateCalories()
+    {
+        if(size.equals("Big"))
+        {
+            return 100;
+        }
+        else
+            if(size.equals("Middle"))
+            {
+                return 80;
+            }
+            else
+            {
+                return 50;
+            }
+    }
 
     public String getSize() {
         return size;
@@ -25,15 +41,9 @@ public class Apple extends Food
     }
 
     public String toString() {
-        return super.toString() + " размера '" + size.toUpperCase() + "'";
+        return super.toString() + " размера '" + size.toUpperCase() + "'" + " и калорийностью: " + calculateCalories();
     }
 
-    public boolean equals(Object arg0) {
-        if (super.equals(arg0)) {
-            if (!(arg0 instanceof Apple)) return false;
-            return size.equals(((Apple)arg0).size);
-        } else
-            return false;
-    }
+
 }
 // checkout dev...       git merge mybranch   git push
